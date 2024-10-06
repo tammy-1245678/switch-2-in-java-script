@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Function to generate random numbers
+function generateRandomNumbers(count, min, max) {
+    let numbers = [];
+    for (let i = 0; i < count; i++) {
+        // Generate a random number, round it, and push to the array
+        let randomNum = Math.random() * (max - min) + min; // Generate random number between min and max
+        numbers.push(Math.round(randomNum)); // Round the number
+    }
+    return numbers;
+}
+
+// Get current date
+function getCurrentDate() {
+    const today = new Date();
+    return today.toLocaleDateString(); // Format date as MM/DD/YYYY
+}
+
+// Main execution
+const count = 10; // Number of random numbers to generate
+const min = 1;    // Minimum number
+const max = 100;  // Maximum number
+
+const randomNumbers = generateRandomNumbers(count, min, max);
+const currentDate = getCurrentDate();
+
+console.log("Random Numbers:", randomNumbers);
+console.log("Current Date:", currentDate);
+</script>
+</body>
+</html>
